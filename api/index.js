@@ -21,7 +21,7 @@ async function get_candlesticks(){
 
 
 async function get_linecharts(){
-    let data={}
+    let data=[]
     await axios({
         method: 'get',
         url: 'https://django-back-three.vercel.app/api/line-chart-data/',
@@ -37,7 +37,7 @@ async function get_linecharts(){
 }
 
 async function get_piecharts(){
-    let data={}
+    let data=[]
     await axios({
         method: 'get',
         url: 'https://django-back-three.vercel.app/api/pie-chart-data',
@@ -53,7 +53,7 @@ async function get_piecharts(){
 }
 
 async function get_barcharts(){
-    let data={}
+    let data=[]
     await axios({
         method: 'get',
         url: 'https://django-back-three.vercel.app/api/bar-chart-data',

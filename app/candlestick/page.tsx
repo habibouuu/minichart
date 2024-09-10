@@ -2,10 +2,10 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from "@mui/material";
 import dData from '../../api/index'
-import Image from "next/image";
+
 import Link from "next/link";
-import ReactApexChart from 'react-apexcharts';
-export default function page() {
+
+export default function Page() {
   const [ddata, setDataa]=useState([]);
 
   useEffect(()=>{
@@ -16,33 +16,8 @@ export default function page() {
     })()
     console.log(ddata)
 
-},[])
- const [chartState,setChart]=useState({
-          
-  series: [{
-    data: ddata
-  }],
-  options: {
-    chart: {
-      type: "candlestick",
-      height: 350
-    },
-    title: {
-      text: "CandleStick Chart",
-      align: "left"
-    },
-    xaxis: {
-      type: "datetime"
-    },
-    yaxis: {
-      tooltip: {
-        enabled: true
-      }
-    }
-  },
-
-
-})
+},[ddata])
+ 
  
 
   return (
@@ -55,10 +30,6 @@ export default function page() {
             <span className='w-28'></span>
          </div>
          <div className='bg-[yellow] h-full w-full'>
-         {/* <div id="chart"> */}
-                {/* <ReactApexChart options={chartState.options} series={chartState.series} type="candlestick" height={350} />
-              </div>
-              <div id="html-dist"></div> */}
          </div>
     </div>
   )

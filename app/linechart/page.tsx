@@ -2,10 +2,9 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from "@mui/material";
 import dData from '../../api/index'
-import Image from "next/image";
 import Link from "next/link";
 import { LineChart, Tooltip, CartesianGrid, XAxis, YAxis, Legend, Line } from 'recharts';
-export default function page() {
+export default function Page() {
 
     const [data,setData]=useState([])
     useEffect(()=>{
@@ -16,7 +15,7 @@ export default function page() {
         })()
         console.log(data)
 
-    },[])
+    },[data])
 
   return (
     <div className='p-10 w-screen h-screen flex flex-col justify-center  gap-20'>
@@ -29,7 +28,7 @@ export default function page() {
          </div>
          <div className='bg-[beige]  w-full flex justify-center py-10'>
         
-         <LineChart className='chart' width={window.screen.width/2.8} height={600} 
+         <LineChart className='chart' width={760} height={600} 
          data={data}
   margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
   <CartesianGrid strokeDasharray="3 3" />

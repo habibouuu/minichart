@@ -2,10 +2,9 @@
 import React, { useEffect, useState } from 'react'
 import { Button } from "@mui/material";
 import dData from '../../api/index'
-import Image from "next/image";
 import Link from "next/link";
-import { PieChart, Tooltip, CartesianGrid, XAxis, YAxis, Legend, Pie } from 'recharts';
-export default function page() {
+import { PieChart, Pie } from 'recharts';
+export default function Page() {
 
     const [data,setData]=useState([])
     useEffect(()=>{
@@ -16,7 +15,7 @@ export default function page() {
         })()
         console.log(data)
 
-    },[])
+    },[data])
 
   return (
     <div className='p-10 w-screen h-screen flex flex-col justify-center  gap-20'>
@@ -29,7 +28,7 @@ export default function page() {
      </div>
      
      <div className='bg-[beige] w-full flex justify-center py-10'>
-     <PieChart className='chart' width={window.screen.width/2.8} height={600} >
+     <PieChart className='chart' width={760} height={600} >
   <Pie data={data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={150} fill="#8884d8" />
   <Pie data={data} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={160} outerRadius={180} fill="#82ca9d" label />
 </PieChart>
