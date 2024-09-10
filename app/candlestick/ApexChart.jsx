@@ -1,10 +1,15 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import ReactApexChart from 'react-apexcharts';
 import Candlesticks from '../../api/index'
 import * as ddayjs from 'dayjs'
 function ApexChart(){
-   
+  const [Chart, setChart] = useState();
+
+  useEffect(() => {
+    import("react-apexcharts").then((mod) => {
+      setChart(() => mod.default);
+    });
+  }, []);
     const [Ddata,setData]=useState({
         series: [{
           name: 'candle',
@@ -123,7 +128,7 @@ function ApexChart(){
       return (
         <div>
           <div id="chart">
-            <ReactApexChart options={Ddata.options} series={Ddata.series} type="candlestick" height={600} />
+            {Chart && <Chart options={Ddata.options} series={Ddata.series} type="candlestick" height={600}/>}
           </div>
           <div id="html-dist"></div>
         </div>

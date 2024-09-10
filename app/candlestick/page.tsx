@@ -1,10 +1,10 @@
+"use client"
 import React from 'react'
 import { Button } from "@mui/material";
 import ApexChart from './ApexChart'
 import Link from "next/link";
 
 export default function Page() {
-
   return (
     <div className='p-10 w-screen h-screen flex flex-col justify-center  gap-20'>
         <div className='flex justify-between items-center'>
@@ -15,7 +15,7 @@ export default function Page() {
             <span className='w-28'></span>
          </div>
          <div className='bg-[beige]  w-full flex flex-col justify-center  py-10'>
-          <ApexChart/>
+          {<ApexChart/>}
          </div>
     </div>
   )
