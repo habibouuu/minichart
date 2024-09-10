@@ -3,16 +3,16 @@ const axios = require('axios');
 
 
 async function get_candlesticks(){
-   let data={}
-    axios({
+   let data=null
+    await axios({
         method: 'get',
         url: 'https://django-back-three.vercel.app/api/candlestick-data',
-        responseType: 'json',
       })
         .then(function (response) {
-            data=response
+            console.log(response.data.candlestick)
+
+            data=response.data.candlestick
         })
-        console.log(data)
     
 
     return data
@@ -21,15 +21,51 @@ async function get_candlesticks(){
 
 
 async function get_linecharts(){
+    let data={}
+    await axios({
+        method: 'get',
+        url: 'https://django-back-three.vercel.app/api/line-chart-data/',
+      })
+        .then(function (response) {
+            data=response.data.linechart
+           
+        })
+        
+    
 
+    return data
 }
 
 async function get_piecharts(){
+    let data={}
+    await axios({
+        method: 'get',
+        url: 'https://django-back-three.vercel.app/api/pie-chart-data',
+      })
+        .then(function (response) {
+            data=response.data.piechart
+           
+        })
+        
+    
 
+    return data
 }
 
 async function get_barcharts(){
+    let data={}
+    await axios({
+        method: 'get',
+        url: 'https://django-back-three.vercel.app/api/bar-chart-data',
+      })
+        .then(function (response) {
+            data=response.data.barchart
+           
+        })
+        
+    
 
+    return data
 }
 
 
