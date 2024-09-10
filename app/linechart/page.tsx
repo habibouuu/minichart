@@ -10,12 +10,10 @@ export default function Page() {
     useEffect(()=>{
         (async()=>{
             const a:any = await dData.get_linecharts()
-            console.log(a)
             setData(a)
         })()
-        console.log(data)
 
-    },[data])
+    },[])
 
   return (
     <div className='p-10 w-screen h-screen flex flex-col justify-center  gap-20'>
@@ -28,7 +26,7 @@ export default function Page() {
          </div>
          <div className='bg-[beige]  w-full flex justify-center py-10'>
         
-         <LineChart className='chart' width={760} height={600} 
+         <LineChart className='chart' width={1200} height={600} 
          data={data}
   margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
   <CartesianGrid strokeDasharray="3 3" />

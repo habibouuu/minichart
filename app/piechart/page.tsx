@@ -10,12 +10,12 @@ export default function Page() {
     useEffect(()=>{
         (async()=>{
             const a:any = await dData.get_piecharts()
-            console.log(a)
+            
             setData(a)
         })()
-        console.log(data)
+        
 
-    },[data])
+    },[])
 
   return (
     <div className='p-10 w-screen h-screen flex flex-col justify-center  gap-20'>
@@ -28,7 +28,7 @@ export default function Page() {
      </div>
      
      <div className='bg-[beige] w-full flex justify-center py-10'>
-     <PieChart className='chart' width={760} height={600} >
+     <PieChart className='chart' width={1200} height={600} >
   <Pie data={data} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={150} fill="#8884d8" />
   <Pie data={data} dataKey="value" nameKey="name" cx="50%" cy="50%" innerRadius={160} outerRadius={180} fill="#82ca9d" label />
 </PieChart>

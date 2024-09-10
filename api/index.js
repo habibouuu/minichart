@@ -9,7 +9,6 @@ async function get_candlesticks(){
         url: 'https://django-back-three.vercel.app/api/candlestick-data',
       })
         .then(function (response) {
-            console.log(response.data.candlestick)
 
             data=response.data.candlestick
         })

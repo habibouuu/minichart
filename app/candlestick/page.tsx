@@ -1,24 +1,9 @@
-"use client"
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Button } from "@mui/material";
-import dData from '../../api/index'
-
+import ApexChart from './ApexChart'
 import Link from "next/link";
 
 export default function Page() {
-  const [ddata, setDataa]=useState([]);
-
-  useEffect(()=>{
-    (async()=>{
-        const a:any = await dData.get_candlesticks()
-        console.log(a)
-        setDataa(a)
-    })()
-    console.log(ddata)
-
-},[ddata])
- 
- 
 
   return (
     <div className='p-10 w-screen h-screen flex flex-col justify-center  gap-20'>
@@ -29,7 +14,8 @@ export default function Page() {
 
             <span className='w-28'></span>
          </div>
-         <div className='bg-[yellow] h-full w-full'>
+         <div className='bg-[beige]  w-full flex flex-col justify-center  py-10'>
+          <ApexChart/>
          </div>
     </div>
   )
