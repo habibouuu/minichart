@@ -16,11 +16,11 @@ export default function Page() {
     },[])
 
   return (
-    <div className='p-10 w-screen h-screen flex flex-col justify-center  gap-20'>
+    <div className='p-10 w-screen h-screen flex flex-col justify-start  gap-20'>
         <div className='flex justify-between items-center'>
             <Link href='/'><Button sx={{px:4, py:2, backgroundColor:'red', color:'white', borderRadius:'17px'}}>Back</Button></Link>
             
-            <h1 className='text-[20px]'>Line Chart</h1>
+            <h1 className='text-[32px]'>Line Chart</h1>
 
             <span className='w-28'></span>
          </div>

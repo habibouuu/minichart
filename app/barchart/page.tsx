@@ -20,7 +20,7 @@ export default function Page() {
         <div className='flex justify-between items-center'>
             <Link href='/'><Button sx={{px:4, py:2, backgroundColor:'red', color:'white', borderRadius:'17px'}}>Back</Button></Link>
             
-            <h1 className='text-[20px]'>Bar Chart</h1>
+            <h1 className='text-[32px]'>Bar Chart</h1>
 
             <span className='w-28'></span>
          </div>
