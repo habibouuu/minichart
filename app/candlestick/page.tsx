@@ -7,16 +7,16 @@ import Link from "next/link";
 export default function Page() {
   return (
     <div className='p-10 w-screen h-screen flex flex-col justify-start gap-20'>
-        <div className='flex justify-between items-center'>
-            <Link href='/'><Button sx={{px:4, py:2, backgroundColor:'red', color:'white', borderRadius:'17px'}}>Back</Button></Link>
-            
-            <h1 className='text-[32px]'>Candle Stick</h1>
+      <div className='flex justify-between items-center'>
+        <Link href='/'><Button sx={{ px: 4, py: 2, backgroundColor: 'red', color: 'white', borderRadius: '17px' }}>Back</Button></Link>
 
-            <span className='w-28'></span>
-         </div>
-         <div className='bg-[beige]  w-full flex flex-col justify-center  py-10'>
-          {<ApexChart/>}
-         </div>
+        <h1 className='text-[32px]'>Candle Stick</h1>
+
+        <span className='w-28'></span>
+      </div>
+      <div className='bg-[beige]  w-full flex flex-col justify-center  py-10'>
+        {<ApexChart />}
+      </div>
     </div>
   )
 }

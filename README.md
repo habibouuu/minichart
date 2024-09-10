@@ -18,19 +18,23 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tools Used
 
-## Learn More
+Next.js
+Django
+Typescript
+Javascript
+Python
+TailwindCss
+Recharts.js
+Apexchartsjs
+Vercel
+Github
+Git
+Virtual Studio Code
 
-To learn more about Next.js, take a look at the following resources:
+## Approach
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+My approach was simple. As stated on the submission requirements, I used Rechart to display data from a backend server for 3/4 of the charts, and used Apexcharts for candlestick charts since recharts didn't have candlesticks. I deployed both the Django app and Nextjs on Vercel, then used cors and axios to connect them. Finally, I used Git and Github to manage the codebase
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
